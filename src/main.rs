@@ -32,5 +32,15 @@ impl Company {
 }
 
 fn main() {
-    println!("Hello, world!");
+    let mut rust_componay = Company {
+        departments: HashMap::new(),
+    };
+
+    rust_componay.add_employee("ADCs", "Caitlen");
+    rust_componay.add_employee("ADCs", "Jinx");
+    rust_componay.add_employee("ADCs", "MS");
+    rust_componay.add_employee("Fighters", "Garen");
+
+    rust_componay.display_department("ADCs");
+    rust_componay.display_company();
 }

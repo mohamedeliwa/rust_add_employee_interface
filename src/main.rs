@@ -56,10 +56,10 @@ fn main() {
         departments: HashMap::new(),
     };
 
-    rust_componay.add_employee("ADCs", "Caitlen");
-    rust_componay.add_employee("ADCs", "Jinx");
-    rust_componay.add_employee("ADCs", "MS");
-    rust_componay.add_employee("Fighters", "Garen");
+    rust_componay.execute("Add MS to ADCs");
+    rust_componay.execute("Add Caitlen to ADCs");
+    rust_componay.execute("Add Jinx to ADCs");
+    rust_componay.execute("Add Garen to Fighters");
 
     rust_componay.display_department("ADCs");
     rust_componay.display_company();

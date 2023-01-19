@@ -37,6 +37,18 @@ impl Company {
     fn display_company(&self) {
         println!("{:#?}", self)
     }
+
+    // a method that excutes an addition command
+    // to add an employee to a department
+    // command structure
+    // add [employee name] to [department name]
+    fn execute(&mut self, command: &str) {
+        let command_components: Vec<&str> = command.split(' ').collect();
+        let department = command_components[3];
+        let employee = command_components[1];
+        self.add_employee(department, employee);
+        println!("{} added to {}", employee, department);
+    }
 }
 
 fn main() {

@@ -21,8 +21,15 @@ impl Company {
 
     // a method to display employees of a single department
     fn display_department(&self, department: &str) {
-        println!("{department}' department employees are:");
-        println!("{:#?}\n", self.departments[department]);
+        match self.departments.get(department) {
+            Some(employees) => {
+                println!("{department}' department employees are:");
+                println!("{:#?}\n", employees);
+            }
+            None => {
+                println!("{department} is an empty department.\n");
+            }
+        };
     }
 
     // a method to display employees of all departments

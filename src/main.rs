@@ -11,6 +11,7 @@ impl Company {
         match self.departments.get_mut(department) {
             Some(employees) => {
                 employees.push(name.to_string());
+                employees.sort();
             }
             None => {
                 self.departments

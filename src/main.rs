@@ -62,5 +62,6 @@ fn main() {
     rust_componay.execute("Add Garen to Fighters");
 
     rust_componay.display_department("ADCs");
+    rust_componay.display_department("Fighters");
     rust_componay.display_company();
 }
